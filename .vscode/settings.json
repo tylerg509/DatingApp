@@ -1,0 +1,32 @@
+
+{
+  "deploy": {
+    "packages": [
+      {
+        "name": "Version 1.0",
+        "description": "Dating App Version 1.0",
+        "files": ["HarvestApp.API/bin/Debug/netcoreapp2.1/publish/**"]
+      }
+    ],
+    "targets": [
+      {
+        "type": "sftp",
+        "name": "Linux",
+        "description": "Remote Linux Server",
+        "dir": "/var/harvestapp",
+        "mappings": [
+            {
+                "source": "/HarvestApp.API/bin/Debug/netcoreapp2.1/publish",
+                "target": "/"
+            }
+        ],
+        "host": "206.189.65.121",
+        "port": 22,
+        "user": "root", "password": "",
+        "checkBeforeDeploy": true
+      }
+    ]
+  },
+  "appService.defaultWebAppToDeploy": "/subscriptions/246f2ec9-2fbd-49d4-b446-625972706a4f/resourceGroups/ha-resource-group/providers/Microsoft.Web/sites/HarvestApp",
+  "appService.deploySubpath": ""
+}

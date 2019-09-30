@@ -1,0 +1,13 @@
+.resisterform{
+    columns: 6;
+}
+
+@media only screen and (max-width: 500px) {
+    /* For mobile phones: */
+    [class*="resisterform"] {
+        columns: 4;
+    }
+    [class*="control-label"] {
+        margin-right:1px
+    }
+  }

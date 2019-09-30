@@ -1,0 +1,26 @@
+<div class="container mt-5">
+  <div *ngIf="!registerMode && !aboutMode" style="text-align: center">
+    <h1>The Harvest Dating Experience</h1>
+    <br>
+    <p *ngIf="!loggedIn()" class="lead">Sign in and let the harvest begin...</p>
+    <div class="text-center">
+      <button *ngIf="!loggedIn()" class="btn btn-primary btn-lg mr-2" (click)="registerToggle()" >Register</button>
+      <button class="btn btn-info btn-lg" (click)="aboutToggle()">Learn more</button>
+    </div>
+  </div>
+
+  <div *ngIf="registerMode" class="container">
+    <div class="row justify-content-center">
+      <div class="col-8">
+        <app-register (cancelRegister)="cancelRegisterMode($event)"> </app-register>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="aboutMode" class="container">
+      <div class="row justify-content-stretch">
+        <div class="col-10">
+          <app-about (cancelAbout)="cancelAboutMode($event)"></app-about>
+        </div>
+      </div>
+    </div> 
+</div>

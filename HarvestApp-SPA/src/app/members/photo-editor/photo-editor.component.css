@@ -1,0 +1,39 @@
+img.img-thumbnail{
+    height:125px;
+    min-width: 125px !important;
+    margin: 2px;
+}
+ 
+
+.nv-file-over {
+    border: dotted 3px red;
+
+}
+
+input[type=file] {
+    color: transparent;
+}
+
+.not-approved {
+    opacity: 0.2;
+}
+
+.img-wrapper {
+    position: absolute;
+}
+
+.img-text {
+    position: absolute;
+    bottom: 50%;
+}
+
+  /* Responsive columns - one column layout (vertical) on small screens */
+  @media screen and (max-width:500px) {
+    .img.img-thumbnail{
+        height:125px;
+        min-width: 125px !important;
+        margin: 2px;
+
+    }
+
+  }
